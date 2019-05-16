@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!--#include virtual="/next/common/include/ga.inc"-->
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="<!--#include virtual='/next/common/include/viewport.inc'-->">
-<meta name="Description" content="<!--#include virtual='/next/common/include/description.inc'-->">
-<meta name="Keywords" content="<!--#include virtual='/next/common/include/keywords.inc'-->">
-<title><!--#include virtual="/next/common/include/title.inc"--></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="サンプルディスクリプションです">
+<meta name="Keywords" content="サンプルキーワード">
+<title>NEXT IDEMITSU! - 出光興産</title>
 
 <meta property="og:title" content="">
 <meta property="og:url" content="">
@@ -25,14 +24,35 @@
 
 <body>
 
-<span class="loading" id="loading"><img src="/next/common/images/next_idemitsu.png" alt=""></span><!-- /load -->
+<span class="loading" id="loading"><img src="/next/common/images/next_idemitsu.png?v=51e3a1a244c4f45b05c406689300266d" alt=""></span><!-- /load -->
 
 <div id="container">
   <header class="header">
-    <!--#include virtual="/next/common/include/header.inc"-->
+    <div class="h_in">
+      <h1 class="logo"><a href="/next"><img src="/next/common/images/logo_site.png" alt="Logo"></a></h1>
+      <a class="logo_r" id="logo_r" href="#" target="_blank"></a>
+    </div>
   </header><!-- /header -->
 
-  <!--#include virtual="/next/common/include/aside.inc"-->
+  <aside class="aside">
+    <nav class="aside_menu" id="aside_menu">
+      <ul>
+        <li class="active" data-num="0"><span>TOP</span></li>
+        <li data-num="1"><span>MESSAGE</span></li>
+        <li data-num="2"><span>MEMBER<br>#01</span></li>
+        <li data-num="3"><span>MEMBER<br>#02</span></li>
+        <li data-num="4"><span>MEMBER<br>#03</span></li>
+        <li data-num="5"><span>MEMBER<br>#04</span></li>
+      </ul>
+    </nav>
+    <div class="aside_social">
+      <span class="btn_share" id="btn_share"></span>
+      <ul class="lst_share" id="lst_share">
+        <li><a href="#"><i class="ic ic_facebook"></i></a></li>
+        <li><a href="#"><i class="ic ic_twitter"></i></a></li>
+      </ul>
+    </div>
+  </aside>
 
   <main class="main" id="main">
     <div class="section top">
@@ -45,11 +65,11 @@
       </div>
       <div class="top_ct">
         <figure class="openSide">
-            <img src="/next/common/images/next_idemitsu.png" alt="">
+            <img src="/next/common/images/next_idemitsu.png?v=51e3a1a244c4f45b05c406689300266d" alt="">
         </figure>
       </div>
       <div class="top_scr" id="top_scr">
-        <img src="/next/common/images/scroll_indicator.png" alt="">
+        <img src="/next/common/images/scroll_indicator.png?v=65eca5648e5c9d986f22c0f05e7cd4bb" alt="">
       </div>
     </div><!-- /.top -->
     <section class="section message">
@@ -157,7 +177,15 @@
   </main>
 
   <footer class="footer" id="footer">
-    <!--#include virtual="/next/common/include/footer.inc"-->
+    <div class="f_in">
+      <nav class="f_nav">
+        <ul>
+          <li><a href="#">個人情報保護方針<small>(プライバシーポリシー)</small></a></li>
+          <li><a href="#">サイトのご利用にあたって</a></li>
+        </ul>
+      </nav>
+      <p>Copyright &copy; Idemitsu Kosan Co.,Ltd. All Rights Reserved.</p>
+    </div>
   </footer><!-- /footer -->
 </div>
 
