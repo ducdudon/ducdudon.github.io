@@ -3,7 +3,7 @@
  * 	require gulp -g
  ===================================================================   */
 var _src        = "_src/";            //- ソースフォルダ
-var _dest       = "../html/";  //- 書出しフォルダ
+var _dest       = "../";  //- 書出しフォルダ
 var IS_MIN      = 0;                  //- JSとCSSを 1:圧縮する or 0:しない
 var IS_HARDCASE = 0;                  //- 1:インデントTab or 0:インデントSpace
 var IS_CLEAR    = 0;                  //- watch開始時に不要ファイルクリア 1:する or 0:しない
