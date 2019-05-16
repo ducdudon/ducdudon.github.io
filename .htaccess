@@ -1,2 +1,2 @@
-AddType text/ .html .htm .shtml .inc
+AddType text/html .html .htm .shtml .inc
 AddOutputFilter INCLUDES .html .htm .shtml .inc
