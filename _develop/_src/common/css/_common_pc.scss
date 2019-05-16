@@ -1,0 +1,55 @@
+@charset "utf-8";
+// ===================================================================
+//	common_pc.css
+// ===================================================================
+.show_sp {
+	display: none !important;
+}
+
+.container {
+	min-width: 960px;
+	margin: 0 auto;
+}
+
+.row { 
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto; 
+	background: #fff;
+}
+
+.flex{
+	display: flex;
+} 
+
+.flex-item{
+	flex: 1;
+}
+
+.flex-3{
+	flex-grow: 3;
+}
+
+.flex-7{
+	flex-grow: 7;
+}
+
+.title-head{
+	padding: 6px 12px 3px;
+	background: url(../images/title_bg.png) no-repeat;
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+	letter-spacing: .1px;
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@import "./_header_pc.scss";
+@import "./_footer_pc.scss";
+@import "./_pagination_pc.scss";
+@import "./_ttl_pc.scss";
+@import "./_btn_pc.scss";

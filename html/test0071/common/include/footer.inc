@@ -1,0 +1,1 @@
+<p class="copyright">Copyright&copy;2016 dazzy Co.,Ltd All Rights Reserved.</p>

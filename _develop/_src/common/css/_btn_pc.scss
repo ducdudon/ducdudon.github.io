@@ -1,0 +1,67 @@
+a:hover {
+  color: #007cd0;
+}
+.btn-link{
+		text-align: right;
+    margin-top: 14px;
+    padding: 0 27px;
+	.btn{
+		color: #0c434f;
+		border-bottom: 1px solid #a5b1b4;
+		position: relative;
+		&:hover{
+			color: #007cd0;
+			opacity: 1;
+			border-bottom: 1px solid #007cd0;
+		}
+		&:before{
+			content: '';
+			width: 18px;
+			height: 18px;
+			background: url(../images/icon-set.png) no-repeat;
+			display: block;
+	    position: absolute;
+	    left: -24px;
+	    top: 0;
+		}
+		&:after{
+			content: '';
+			width: 10px;
+			height: 13px;
+			background: url(../images/icon-arrow.png) no-repeat;
+			display: block;
+	    position: absolute;
+	    right: -15px;
+			top: 0;
+		}
+	}
+}
+
+.btn-link-green{
+	text-align: center;
+	.btn-green{
+		border: 1px solid #97aa93;
+    padding: 5px 58px 5px 42px;
+    font-weight: bold;
+    color: #3d5838;
+    border-radius: 3px;
+    position: relative;
+    transition: all .5s ease-out;
+    background: linear-gradient(to top, rgba(146, 169, 142, 1) 0%, rgba(175, 197, 171, 1) 50%, rgba(192, 209, 189, 1) 51%, rgba(235, 247, 233, 1) 100%);
+    &:hover{
+    	border: 1px solid #a3c282;
+    	opacity: 1;
+    	background: linear-gradient(to top, rgba(151, 181, 119, 1) 0%, rgba(187, 214, 159, 1) 50%, rgba(203, 226, 179, 1) 51%, rgba(244, 255, 233, 1) 100%);
+    }
+    &:before{
+    	content: '';
+			width: 6px;
+			height: 13px;
+			background: url(../images/arrow.png) no-repeat;
+			display: block;
+	    position: absolute;
+	    right: 10px;
+			top: 8px;
+    }
+	}
+}

@@ -1,0 +1,49 @@
+// 何分の1にするか指定。例：640なら2。768なら2.4など
+$sp_sprite_ratio : 2;
+
+
+//- ===================================================================  for_pc <
+@function spriteScale($target, $scale) {
+  @return ceil($target/$scale);
+}
+
+@mixin sprite-width($sprite, $scale) {
+  width: spriteScale(nth($sprite, 5), $scale);
+}
+
+@mixin sprite-height($sprite, $scale) {
+  height: spriteScale(nth($sprite, 6), $scale);
+}
+
+@mixin sprite-position($sprite, $scale) {
+  $sprite-offset-x: spriteScale(nth($sprite, 3), $scale);
+  $sprite-offset-y: spriteScale(nth($sprite, 4), $scale);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+@mixin sprite-size($sprite, $scale) {
+  background-size: spriteScale(nth($sprite, 7), $scale) spriteScale(nth($sprite, 8), $scale)
+}
+
+@mixin sprite($sprite, $scale:1) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite, 1);
+  @include sprite-width($sprite, $scale);
+  @include sprite-height($sprite, $scale);
+}
+
+// - ===================================================================  for_sp <
+@mixin sprite2($sprite, $scale:$sp_sprite_ratio) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite, $scale);
+  @include sprite-width($sprite, $scale);
+  @include sprite-height($sprite, $scale);
+  @include sprite-size($sprite, $scale);
+}

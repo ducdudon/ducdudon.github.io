@@ -1,0 +1,57 @@
+@charset "utf-8";
+// CSS Document
+$config_sp_scale_img : 2.4;
+$design_width: 768;
+$config_base_fontsize : 10;
+$config_sp_scale_font : 2;
+
+// SP width _____________________________
+@function px2($px_psd) {
+  $result: $px_psd / $config_sp_scale_img;
+  @return #{$result}px;
+}
+
+// vw( designSIZE ) vw指定
+@function vw($design_width_psd) {
+  $vw: $design_width_psd / $design_width * 100;
+  @return #{$vw}vw;
+}
+
+// pw( designSIZE ) %指定
+@function pw($base_design_width, $design_width_psd) {
+  $pw: $design_width_psd / $base_design_width * 100 + '%';
+  @return #{$pw};
+}
+
+// font _____________________________
+@function rem($font_size_psd) {
+  $rem: $font_size_psd / $config_base_fontsize;
+  @return #{$rem}rem;
+}
+
+// rem2( designSIZE) 
+@function rem2($font_size_psd) {
+  $rem: $font_size_psd / $design_width * 100;
+  @return #{$rem}vw;
+}
+
+// @function rem2($font_size_psd) {
+//   $rem: $font_size_psd / $config_base_fontsize / $config_sp_scale_font;
+//   @return #{$rem}rem;
+// }
+
+
+// breakpoint ---------------------------------------------------------------------------
+$breakpoint-pc: 769px;
+$breakpoint-sp: 768px;
+$roboto: 'Roboto', sans-serif;
+@mixin min-screen() {
+  @media screen and (min-width: $breakpoint-pc), print {
+    @content;
+  }
+}
+@mixin max-screen() {
+  @media screen and (max-width: $breakpoint-sp) {
+    @content;
+  }
+}

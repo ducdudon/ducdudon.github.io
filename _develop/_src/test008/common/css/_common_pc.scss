@@ -1,0 +1,57 @@
+@charset "utf-8";
+// ===================================================================
+//	common_pc.css
+// ===================================================================
+.show_sp {
+	display: none !important;
+}
+
+main{
+	position: relative;
+}
+
+.container {
+	min-width: 1200px;
+	overflow: hidden;
+	padding: 0 37px 0 35px;
+}
+
+.row {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.pc{
+	display: block !important;
+}
+.sp{
+	display: none !important;
+}
+
+.title_head{
+	font-size: 2.5rem;
+	font-weight: normal;
+	letter-spacing: 5px;
+	&:before{
+		content: '';
+		width: 22px;
+		height: 22px;
+		background: url('../images/shape_pc.png') no-repeat;
+		background-size: contain;
+		display: inline-block;
+		margin-right: 17px;
+	}
+}
+
+@keyframes zoom {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
+
+@import "./_header_pc.scss";
+@import "./_footer_pc.scss";
+@import "./_pagination_pc.scss";
+@import "./_ttl_pc.scss";
+@import "./_btn_pc.scss";

@@ -1,0 +1,402 @@
+@charset "utf-8";
+// ===================================================================
+//  use index page
+// ===================================================================
+
+main{
+	padding: 0 12px;
+	.about{
+		padding: 35px 0;
+		.about-info{
+			padding: 0 12px;
+			width: calc(100% - 467px);
+			h2{
+				font-size: 2.4rem; 
+		    line-height: 3rem;
+		    border-bottom: 3px double;
+		    padding-bottom: 6px;
+		    margin-bottom: 12px;
+			}
+			p{
+				font-size: 1.4rem;
+    		line-height: 2.4rem;
+    		letter-spacing: .1px;
+			}
+		}
+		figure {
+			padding: 0 11px;
+			cursor: pointer;
+	  	span{
+	  		overflow: hidden;
+	  		display: block;
+	  		border: 1px solid #a7bcc8;
+	  		img{
+	    		border-radius: 3px;
+	    		transition: all .5s ease-out;
+			  }
+	  	}
+		  figcaption{
+		  	text-align: right;
+		  	em{
+		  		position: relative;
+		  		color: #507991;
+			  	font-size: 1rem;
+			  	border-bottom: 1px solid #a7bcc8;
+			  	font-style: normal;
+				  &:before{
+			  		content: '';
+			  		width: 12px;
+			  		height: 12px;
+			  		display: inline-block;
+			  		vertical-align: top;
+			  		background: url(../images/popup_btn.png) top no-repeat;
+			  		margin-right: 4px;
+			  		position: absolute;
+			  		left: -15px;
+			  		top: 2px;
+			  	}
+		  	}
+		  }
+		  &:hover{
+		  	span{
+		  		border: 1px solid #4bb2f8;
+		  	}
+		  	.img{
+	    		transform: scale(1.1);
+			  }
+		  	figcaption{
+		  		text-align: right;
+		  		em{
+						color: #007cd0;
+			  		font-weight: 600;
+			  		border-bottom: 1px solid #007cd0;
+			  		&:before{
+				  		background: url(../images/popup_btn.png) bottom no-repeat;
+				  	}
+		  		}
+		  	}
+	  	}
+	  	.modal {
+		    display: none;
+		    position: fixed;
+		    z-index: 1;
+		    padding-top: 100px;
+		    left: 0;
+		    top: 0;
+		    width: 100%;
+		    height: 100%;
+		    overflow: auto;
+		    background: rgba(51, 51, 51, 0.6);
+		    .big-img{
+		    	margin: auto;
+			    position: absolute;
+			    right: 0;
+			    left: 0;
+			    top: 0;
+			    bottom: 0;
+			    animation-name: animatetop;
+		    	animation-duration: 0.4s
+		    }
+		    .mark{
+		    	position: absolute;
+			    width: 100%;
+			    display: block;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    z-index: -1;
+		    }
+			}
+	  }
+	}
+	.type{
+		overflow: hidden;
+		padding-bottom: 20px;
+		.type-inner{
+			.type-item{
+				padding: 0 11px;
+				width: calc(33.333%);
+				&:hover{
+					figure{
+						img{
+							transform: scale(1.1);
+						}
+					}
+				}
+				a{
+					display: block;
+					figure{
+						overflow: hidden;
+						border: 1px solid #a7bcc8;
+						img{
+							transition: all .5s ease-out;
+						}
+					}
+					&:hover{
+						opacity: .8;
+						span{
+							border-bottom: 1px solid #007cd0;
+							color: #007cd0;
+						}
+					}
+					em{
+						color: #0c434f;
+						font-size: 1.2rem;
+						font-weight: bold;
+						margin: 8px 0 5px;
+						padding: 0 2px;
+						border-bottom: 1px solid #a5b1b4;
+						font-style: normal;
+						display: inline-block;
+					}
+					p{
+						padding: 0 1px; 
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+	.license{
+		padding: 17px 0;
+		.license-inner{
+			article{
+				margin: 4px 12px;
+				background: #e6eef2;
+				width: calc(33.33%);
+				h5{
+					font-weight: bold;
+					padding: 3px 12px;
+					font-size: 1.2rem;
+					background: #dbe6ec;
+					border-bottom: 1px solid #fff;
+				}
+				span{
+					padding: 3px 12px;
+					background: #e6eef2;
+					font-size: 1rem;
+					display: block;
+				}
+				.description{
+					padding: 9px 12px 8px;
+					background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(219, 230, 236, 0.74) 74%);
+					border-bottom: 1px solid #fff;
+					.license-link{
+						margin-top: 33px;
+	    			padding: 0 15px;
+					}
+					.license-link-2{
+	    			padding: 0 15px;
+	    			margin-top: 16px;
+					}
+				}
+				.price{
+					padding: 2px 11px;
+					background: #e6eef2;
+				}
+			}
+			.license-green{
+				background: #e7efe6;
+				position: relative;
+				&:hover{
+					&:after{
+						animation: shake .5s;
+					}
+				}
+				&:after{
+					content: '';
+					width: 52px;
+					height: 52px;
+					background: url(../images/free_badge.png) no-repeat;
+			    position: absolute;
+					top: -8px;
+	    		right: -9px;
+				}
+				h3{
+					background: #dce7da;
+				}
+				h5{
+					background: #e7efe6;
+				}
+				.description{
+					background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(231, 239, 230, 0.74) 74%);
+					.license-link{
+						margin: 27px 0 4px;
+					}
+				}
+				.price{
+					@extend h5;
+				}
+			}
+		}
+	}
+	.notice{
+		padding: 14px 0;
+		.title-head{margin-bottom: 11px;}
+		.notice-outer{
+			.notice-item{
+				width: calc(50%);
+				padding: 0 12px;
+				&:first-child{
+					box-shadow: 1px 0px 0px 0px #dddddd;
+				}
+				h3{
+					font-weight: bold;
+					font-size: 1.2rem;
+					margin-bottom: 9px;
+					line-height: 1.8rem;
+				}
+				ul{
+					li{
+						padding: 3px 0;
+						&:nth-child(even){
+							background: #f3f8fb;
+						}
+						a{
+							color: #0c434f;
+							span{
+								em{
+									border-bottom: 1px solid #a5b1b4;
+									font-style: normal;
+								}
+							}
+							.notice-icon-red{
+								&:before{
+									content: '重要';
+									display: inline-block;
+									padding: 0 5px;
+									font-size: 1rem;
+									border-radius: 3px;
+									color: #fff;
+									margin-right: 7px;
+									font-style: normal;
+									background: #d00036;
+								}
+							}
+							.notice-icon-green{
+								&:before{
+									content: 'シックス・アパート';
+									display: inline-block;
+									padding: 0 5px;
+									font-size: 1rem;
+									border-radius: 3px;
+									color: #fff;
+									margin-right: 7px;
+									font-style: normal;
+									background: #aab45a;
+								}
+							}
+							.notice-icon-gray{
+								&:before{
+									content: 'ProNet';
+									display: inline-block;
+									padding: 0 7px;
+									font-size: 1rem;
+									border-radius: 3px;
+									color: #fff;
+									margin-right: 7px;
+									font-style: normal;
+									background: #9b9b9b;
+								}
+							}
+							time{
+								padding: 0 8px;
+								flex: 0 0 133px;
+							}
+						}
+					}
+				}
+				.notice-link{
+					margin-top: 16px;
+	    		padding: 0px 13px;
+				}
+			}
+		} 
+	}
+	.related{
+		padding: 23px 0 38px;
+		border-bottom: 1px solid #dddddd;
+		.related-inner{
+			padding: 0 12px;
+			.related-new{
+				border: 1px solid #a7bcc8;
+				position: relative;
+				&:hover{
+					&:after{
+						animation: shake .5s;
+					}
+				}
+				&:after{
+					content: '';
+					width: 46px;
+					height: 46px;
+					background: url(../images/new_badge.png) no-repeat;
+			    position: absolute;
+					top: -8px;
+	    		left: -9px;
+				}
+			}
+			.related-item{
+				padding: 0px 20px 0 12px;
+				h5{
+					font-size: 1.2rem;
+					font-weight: bold;
+					color: #0c434f;
+					margin-bottom: 5px;
+					span{
+						border-bottom: 1px solid #a7bcc8;
+					}
+				}
+			}
+			.related-camp{
+				figure{
+					margin-top: 8px;
+				}
+			}
+		}
+		.notice-link{
+			margin-top: 16px;
+		}
+	}
+	.box{
+		.box-item{
+			background: #dbe6ec;
+			padding: 8px 8px 10px 13px;
+			margin: 12px .5px 14px;
+			width: calc(25%);
+			a{
+				color: #0c434f;
+				margin-bottom: 6px;
+				display: inline-block;
+				&:hover{
+					h5{
+						border-bottom: 1px solid #007cd0;
+					}
+				}
+				h5{
+					border-bottom: 1px solid #748b95;
+					font-size: 1.2rem;
+					font-weight: bold;
+					display: inline;
+				}
+			}
+			p{
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
