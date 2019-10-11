@@ -69,7 +69,7 @@ h1 {
   padding: 13px 20px 27px;
   width: 135px;
   height: 135px;
-  margin: 0 10px 20px;
+  margin: 0 3px 20px;
   box-sizing: border-box;
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
   background: repeating-linear-gradient(55deg, 
@@ -94,8 +94,4 @@ h1 {
 }
 .seconds {
   text-shadow: 4px 2px 3px rgba(0,0,0, 0.6);
-}
-iframe{
-  position: absolute;
-  z-index: -1;
 }
