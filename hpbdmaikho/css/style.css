@@ -46,7 +46,6 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 h1 {
   text-align:center;
@@ -95,4 +94,8 @@ h1 {
 }
 .seconds {
   text-shadow: 4px 2px 3px rgba(0,0,0, 0.6);
+}
+iframe{
+  position: absolute;
+  z-index: -1;
 }

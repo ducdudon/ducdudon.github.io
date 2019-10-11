@@ -41,3 +41,10 @@ function initializeClock(id, endtime){
 
 var deadline = '2019-10-19 00:00:00';
 initializeClock('clockdiv', deadline);
+
+function height(){
+  var m = document.getElementById("main");
+  m.style.height = window.innerHeight + "px";
+}
+height();
+window.addEventListener("resize",height,false);
