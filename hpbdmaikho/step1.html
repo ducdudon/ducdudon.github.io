@@ -14,7 +14,9 @@
   <meta property="og:image" content="https://ducdudon.github.io/hpbdmaikho/lovelygirl.jpg">
   <meta property="og:type" content="website">
 
-  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap&subset=vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap&subset=vietnamese" rel="stylesheet">
   <link rel="stylesheet" href="css/step1.css">
 </head>
 
@@ -22,16 +24,31 @@
   <main id="main">
     <div class="cover super-centered-container">
       <canvas id="can">Get a browser</canvas>
-      <div class="overlay-static">    
+      <div class="overlay-static">
         <div class="inline-blocks">
-          <h2 class="twenty-one block">Happy Birthday<br><span>Mai Khờ</span><br><small>19/10/93</small></h2>
+          <h2 class="twenty-one block">Happy Birthday<br><span>Mai Khờ</span><br><small>19.10.93</small></h2>
         </div>
       </div>
+      <span id="btn" onclick="play()"><img class="shake" src="images/cake.png" alt=""></span>
     </div>
+    <div class="content" id="content">
+      <img class="image block" id="img" src="images/hpbd.jpg">
+      <p>Hi bé!<br>Lại là a đây. Thoắt cái mà sinh nhật thứ 3 bên a rùi hè. </p>
     </div>
+    <audio id="audio"><source src="music/music.mp3"></audio>
   </main>
   <!-- end main -->
 </div>
+
+<script>
+  function play(){
+   var audio = document.getElementById("audio");
+   var btn = document.getElementById("btn");
+   audio.play();
+   audio.loop = true;
+   audio.volume = 0.2;
+  }
+</script>
 
 <script src="js/step1.js"></script>
 </body>

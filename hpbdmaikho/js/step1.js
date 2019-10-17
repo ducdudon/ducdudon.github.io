@@ -73,7 +73,7 @@ var last_emit = 0;
 
 function render(){
   now = Date.now();
-  dt = (last - now) / 500; 
+  dt = (last - now) / 300; 
   last = now;
   ctx.clearRect(0,0,w,h);
   fireflies.forEach(function(f){
@@ -108,3 +108,62 @@ function isOnHeart(x,y){
     // Simplest Equation of lurve
     return (Math.pow((x2 + y2 - 1), 3) - (x2 * (y2 * y)) <= 0);
 }
+
+
+document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var ctnText = document.querySelector(".content p");
+  var dataText = [ctnText.innerHTML];
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     ctnText.innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 130);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+      typeWriter(dataText[i], 0, function(){
+        // after callback (and whole text has been animated), start next text
+        StartTextAnimation(i + 1);
+     });
+    }
+  }
+  
+
+  function btn() {
+    var btn = document.getElementById('btn');
+    var ctn = document.getElementById('content');
+    var img = document.getElementById('img');
+    setTimeout(function() {
+      btn.classList.add('open');
+    }, 10000);
+    btn.addEventListener('click',function(){
+      ctn.classList.add('open');
+      // start the text animation
+      setTimeout(function() {
+        img.classList.add('open');
+      }, 2000);
+      setTimeout(function() {
+        ctnText.style.display = "block";
+        StartTextAnimation(0);
+      }, 4000);
+    });
+  }
+  btn();
+});
