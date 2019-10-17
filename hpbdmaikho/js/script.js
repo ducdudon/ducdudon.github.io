@@ -32,6 +32,7 @@ function initializeClock(id, endtime){
     
     if(t.total <= 0){
       clearInterval(timeinterval);
+      window.location.href = "step1.html";
     }
   }
   
