@@ -164,6 +164,11 @@ body{
   animation: caret 1s steps(1) infinite;
 }
 
+.content p em{
+  display: block;
+  text-align: right;
+}
+
 
 #btn{
   position: absolute;
