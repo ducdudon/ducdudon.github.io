@@ -95,9 +95,6 @@ function render(){
   requestAnimationFrame(render);
 }
 
-
-render();
-
 // 
 function isOnHeart(x,y){
     x = ((x - center_x) / (min_distance * 1.2)) * 1.8;
@@ -150,19 +147,25 @@ document.addEventListener('DOMContentLoaded',function(event){
     var btn = document.getElementById('btn');
     var ctn = document.getElementById('content');
     var img = document.getElementById('img');
+    var cover = document.getElementById('cover');
     setTimeout(function() {
       btn.classList.add('open');
-    }, 10000);
+    }, 1000);
     btn.addEventListener('click',function(){
-      ctn.classList.add('open');
+      cover.classList.add('open');
+      btn.classList.remove('open');
+      render();
       // start the text animation
       setTimeout(function() {
+        ctn.classList.add('open');
+      }, 25000);
+      setTimeout(function() {
         img.classList.add('open');
-      }, 2000);
+      }, 27000);
       setTimeout(function() {
         ctnText.style.display = "block";
         StartTextAnimation(0);
-      }, 4000);
+      }, 29000);
     });
   }
   btn();

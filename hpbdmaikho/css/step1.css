@@ -23,7 +23,7 @@
 }
 
 .twenty-one{
-  font-size: 45px;
+  font-size: 40px;
   font-family: 'Patrick Hand', cursive;
   font-weight: 100;
   line-height: 1.2;
@@ -46,7 +46,9 @@
 }
 
 .cover{
-  background: rgba(0,0,0,0.6);
+  background-image: url('../images/bg.png');
+  background-position: center center;
+  background-size: contain;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -55,12 +57,23 @@
   z-index: 1000;
 }
 
+.cover:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  position: absolute;
+}
+
 #can{
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 99;
 }
 
 
@@ -69,6 +82,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease-out;
+}
+
+.super-centered-container.open{
+  opacity: 1;
+  visibility: visible;
 }
 
 small{
@@ -105,9 +126,7 @@ a{
 }
 
 body{
-  background: url('../images/bg.png');
-  background-position: center center;
-  background-size: contain;
+  position: relative;
 }
 
 .content{
@@ -133,9 +152,10 @@ body{
 }
 
 .content p{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Be Vietnam', sans-serif;
+  font-family: 'Charmonman', cursive;
   display: none;
-  font-size: 20px;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -148,14 +168,15 @@ body{
 #btn{
   position: absolute;
   left: 50%;
-  bottom: 20%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
   width: 50px;
   height: 50px;
   opacity: 0;
   visibility: hidden;
   transition: all 1s ease-out;
+  z-index: 9999;
 }
 
 #btn img{
