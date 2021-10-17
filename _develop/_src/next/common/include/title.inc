@@ -1,1 +1,0 @@
-NEXT IDEMITSU! - 出光興産

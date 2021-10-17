@@ -1,1 +1,0 @@
-width=device-width
