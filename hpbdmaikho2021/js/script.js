@@ -1,7 +1,9 @@
 /* https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/ */
 
 function getTimeRemaining(endtime){
-  var t = Date.parse(new Date(endtime)) - Date.parse(new Date());
+  var arr = endtime.split(/[- :]/);
+  var date = new Date(arr[0], arr[1]-1, arr[2], arr[3], arr[4], arr[5]);
+  var t = Date.parse(date) - Date.parse(new Date());
   var seconds = Math.floor( (t/1000) % 60);
   var minutes = Math.floor( (t/1000 / 60) % 60);
   var hours = Math.floor( (t/(1000 * 60 * 60)) % 24);
