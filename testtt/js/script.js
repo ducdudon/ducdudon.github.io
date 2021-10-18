@@ -42,7 +42,7 @@ function initializeClock(id, endtime){
   var timeinterval = setInterval(updateClock,1000);
 }
 
-var deadline = '2021-10-19 00:00:00';
+var deadline = '2021-10-18 18:07:00';
 initializeClock('clockdiv', deadline);
 
 function height(){
